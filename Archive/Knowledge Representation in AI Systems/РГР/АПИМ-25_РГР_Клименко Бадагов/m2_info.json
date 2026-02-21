@@ -1,0 +1,23 @@
+{
+  "Тип модели": "Sequential",
+  "Нормализованные данные": true,
+  "Названия входных признаков": [
+    "carat",
+    "cut",
+    "color",
+    "clarity",
+    "depth",
+    "table",
+    "x",
+    "y",
+    "z",
+  ],
+  "Названия выходных признаков": [
+    "price",
+  ],
+  R2: 0.9759392142295837,
+  RMSE: 0.036781987562052545,
+  Структура: "Dense(units=64, activation=relu) -> Dense(units=32, activation=relu) -> Dense(units=1, activation=linear)",
+  "Функция потерь": "MeanSquaredError",
+  Оптимизатор: "Adam(learning_rate=0.019999999552965164)",
+}
