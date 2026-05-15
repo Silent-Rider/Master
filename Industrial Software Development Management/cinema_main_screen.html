@@ -1,0 +1,193 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0d0d14; font-family: 'Georgia', serif; color: #e8e0d0; }
+
+.app { max-width: 390px; margin: 0 auto; background: #0d0d14; min-height: 100vh; }
+
+.topbar {
+  padding: 18px 18px 14px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo { font-size: 22px; font-weight: 700; letter-spacing: 0.12em; color: #f5c842; }
+.topbar-right { display: flex; gap: 16px; align-items: center; }
+.topbar-right i { font-size: 20px; color: #8a8070; }
+
+.search-wrap { margin: 0 16px 18px; background: #1a1a28; border-radius: 12px; border: 0.5px solid #2a2a3a; display: flex; align-items: center; padding: 10px 14px; gap: 10px; }
+.search-wrap i { color: #8a8070; font-size: 16px; }
+.search-placeholder { font-size: 14px; color: #8a8070; font-family: inherit; }
+
+.filter-row { display: flex; gap: 8px; padding: 0 16px 20px; overflow-x: auto; scrollbar-width: none; }
+.filter-row::-webkit-scrollbar { display: none; }
+.chip { border-radius: 20px; padding: 6px 16px; font-size: 12px; white-space: nowrap; font-family: inherit; border: 0.5px solid #2a2a3a; background: #1a1a28; color: #8a8070; }
+.chip.active { background: #f5c842; border-color: #f5c842; color: #0d0d14; font-weight: 600; }
+
+.section-label { font-size: 11px; letter-spacing: 0.14em; color: #8a8070; text-transform: uppercase; padding: 0 18px 12px; }
+
+.movies-row { display: flex; gap: 12px; padding: 0 16px 24px; overflow-x: auto; scrollbar-width: none; }
+.movies-row::-webkit-scrollbar { display: none; }
+
+.movie-card { flex: 0 0 140px; }
+.poster { width: 140px; height: 200px; border-radius: 10px; overflow: hidden; position: relative; background: #1a1a28; }
+.poster-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.poster-fallback { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; }
+.poster-fallback i { font-size: 36px; color: #3a3a50; }
+.badge-age { position: absolute; top: 8px; left: 8px; background: rgba(13,13,20,0.82); border-radius: 6px; padding: 2px 7px; font-size: 11px; color: #f5c842; border: 0.5px solid #f5c84255; }
+.badge-time { position: absolute; bottom: 8px; right: 8px; background: rgba(13,13,20,0.82); border-radius: 6px; padding: 2px 7px; font-size: 11px; color: #e8e0d0; display: flex; align-items: center; gap: 4px; }
+.movie-title { font-size: 13px; font-weight: 600; margin-top: 8px; line-height: 1.3; color: #e8e0d0; }
+.movie-meta { font-size: 11px; color: #8a8070; margin-top: 3px; }
+.stars { color: #f5c842; font-size: 11px; margin-top: 3px; }
+
+.divider { height: 0.5px; background: #2a2a3a; margin: 0 16px 20px; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 16px 24px; }
+.grid-card { background: #1a1a28; border-radius: 10px; border: 0.5px solid #2a2a3a; padding: 12px; display: flex; gap: 10px; align-items: flex-start; }
+.grid-card-poster { width: 52px; height: 74px; border-radius: 6px; background: #12121e; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.grid-card-poster i { font-size: 20px; color: #3a3a50; }
+.grid-card-info { flex: 1; min-width: 0; }
+.grid-card-title { font-size: 12px; font-weight: 600; line-height: 1.3; color: #e8e0d0; }
+.grid-card-genre { font-size: 11px; color: #8a8070; margin-top: 3px; }
+.grid-card-soon { font-size: 10px; color: #f5c842; margin-top: 6px; }
+
+.bottom-nav { position: sticky; bottom: 0; background: #12121e; border-top: 0.5px solid #2a2a3a; display: flex; justify-content: space-around; padding: 10px 0 16px; }
+.nav-item { display: flex; flex-direction: column; align-items: center; gap: 4px; color: #8a8070; }
+.nav-item.active { color: #f5c842; }
+.nav-item i { font-size: 22px; }
+.nav-label { font-size: 10px; letter-spacing: 0.06em; }
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+<div class="app">
+
+  <div class="topbar">
+    <div class="logo">CINEMA TICKET</div>
+    <div class="topbar-right">
+      <i class="ti ti-bell" aria-hidden="true"></i>
+      <i class="ti ti-user-circle" aria-hidden="true"></i>
+    </div>
+  </div>
+
+  <div class="search-wrap">
+    <i class="ti ti-search" aria-hidden="true"></i>
+    <span class="search-placeholder">Поиск по названию…</span>
+  </div>
+
+  <div class="filter-row">
+    <div class="chip active">Все</div>
+    <div class="chip">Сегодня</div>
+    <div class="chip">Завтра</div>
+    <div class="chip">Боевик</div>
+    <div class="chip">Драма</div>
+    <div class="chip">Комедия</div>
+    <div class="chip">Анимация</div>
+  </div>
+
+  <div class="section-label">Сейчас в кино</div>
+
+  <div class="movies-row">
+
+    <div class="movie-card">
+      <div class="poster" style="background: linear-gradient(160deg,#1e1230,#2e1a10);">
+        <div class="badge-age">16+</div>
+        <div class="poster-fallback"><i class="ti ti-movie" aria-hidden="true"></i></div>
+        <div class="badge-time"><i class="ti ti-clock" style="font-size:10px" aria-hidden="true"></i>2ч 18м</div>
+      </div>
+      <div class="movie-title">Дюна: Часть третья</div>
+      <div class="movie-meta">Фантастика</div>
+      <div class="stars">★★★★☆</div>
+    </div>
+
+    <div class="movie-card">
+      <div class="poster" style="background: linear-gradient(160deg,#0e1e30,#101c14);">
+        <div class="badge-age">12+</div>
+        <div class="poster-fallback"><i class="ti ti-movie" aria-hidden="true"></i></div>
+        <div class="badge-time"><i class="ti ti-clock" style="font-size:10px" aria-hidden="true"></i>1ч 54м</div>
+      </div>
+      <div class="movie-title">Падение Луны</div>
+      <div class="movie-meta">Триллер</div>
+      <div class="stars">★★★★★</div>
+    </div>
+
+    <div class="movie-card">
+      <div class="poster" style="background: linear-gradient(160deg,#1e2810,#2a1018);">
+        <div class="badge-age">18+</div>
+        <div class="poster-fallback"><i class="ti ti-movie" aria-hidden="true"></i></div>
+        <div class="badge-time"><i class="ti ti-clock" style="font-size:10px" aria-hidden="true"></i>2ч 05м</div>
+      </div>
+      <div class="movie-title">Чёрное зеркало</div>
+      <div class="movie-meta">Драма</div>
+      <div class="stars">★★★☆☆</div>
+    </div>
+
+    <div class="movie-card">
+      <div class="poster" style="background: linear-gradient(160deg,#201810,#10201e);">
+        <div class="badge-age">6+</div>
+        <div class="poster-fallback"><i class="ti ti-movie" aria-hidden="true"></i></div>
+        <div class="badge-time"><i class="ti ti-clock" style="font-size:10px" aria-hidden="true"></i>1ч 42м</div>
+      </div>
+      <div class="movie-title">Огненный лис</div>
+      <div class="movie-meta">Анимация</div>
+      <div class="stars">★★★★☆</div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+  <div class="section-label">Скоро в прокате</div>
+
+  <div class="grid-2">
+    <div class="grid-card">
+      <div class="grid-card-poster"><i class="ti ti-film" aria-hidden="true"></i></div>
+      <div class="grid-card-info">
+        <div class="grid-card-title">Одиночная игра</div>
+        <div class="grid-card-genre">Боевик</div>
+        <div class="grid-card-soon">23 мая</div>
+      </div>
+    </div>
+    <div class="grid-card">
+      <div class="grid-card-poster"><i class="ti ti-film" aria-hidden="true"></i></div>
+      <div class="grid-card-info">
+        <div class="grid-card-title">Глубокий космос</div>
+        <div class="grid-card-genre">Фантастика</div>
+        <div class="grid-card-soon">1 июня</div>
+      </div>
+    </div>
+    <div class="grid-card">
+      <div class="grid-card-poster"><i class="ti ti-film" aria-hidden="true"></i></div>
+      <div class="grid-card-info">
+        <div class="grid-card-title">Тихий шторм</div>
+        <div class="grid-card-genre">Драма</div>
+        <div class="grid-card-soon">7 июня</div>
+      </div>
+    </div>
+    <div class="grid-card">
+      <div class="grid-card-poster"><i class="ti ti-film" aria-hidden="true"></i></div>
+      <div class="grid-card-info">
+        <div class="grid-card-title">Карнавал</div>
+        <div class="grid-card-genre">Комедия</div>
+        <div class="grid-card-soon">14 июня</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-nav">
+    <div class="nav-item active">
+      <i class="ti ti-home" aria-hidden="true"></i>
+      <span class="nav-label">Репертуар</span>
+    </div>
+    <div class="nav-item">
+      <i class="ti ti-search" aria-hidden="true"></i>
+      <span class="nav-label">Поиск</span>
+    </div>
+    <div class="nav-item">
+      <i class="ti ti-ticket" aria-hidden="true"></i>
+      <span class="nav-label">Билеты</span>
+    </div>
+    <div class="nav-item">
+      <i class="ti ti-user" aria-hidden="true"></i>
+      <span class="nav-label">Профиль</span>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,145 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans);background:transparent}
+.wrap{padding:20px 24px;display:flex;gap:8px;align-items:flex-start}
+.diagram{display:flex;flex-direction:column;align-items:stretch;flex:1;min-width:0;gap:0}
+.row{display:flex;gap:8px}
+.box{border-radius:8px;padding:10px 14px;flex:1;border:0.5px solid;text-align:center}
+.box-title{font-size:13px;font-weight:500;line-height:1.3}
+.box-sub{font-size:11px;margin-top:3px;opacity:0.75}
+
+.b-purple{background:#EEEDFE;border-color:#AFA9EC}.b-purple .box-title{color:#3C3489}.b-purple .box-sub{color:#534AB7}
+.b-teal{background:#E1F5EE;border-color:#5DCAA5}.b-teal .box-title{color:#085041}.b-teal .box-sub{color:#0F6E56}
+.b-blue{background:#E6F1FB;border-color:#85B7EB}.b-blue .box-title{color:#0C447C}
+.b-pink{background:#FBEAF0;border-color:#ED93B1}.b-pink .box-title{color:#72243E}
+.b-amber{background:#FAEEDA;border-color:#EF9F27}.b-amber .box-title{color:#633806}
+.b-coral{background:#FAECE7;border-color:#F0997B}.b-coral .box-title{color:#712B13}
+.b-blue2{background:#E6F1FB;border-color:#85B7EB}.b-blue2 .box-title{color:#0C447C}.b-blue2 .box-sub{color:#185FA5}
+.b-red{background:#FCEBEB;border-color:#F09595}.b-red .box-title{color:#791F1F}.b-red .box-sub{color:#A32D2D}
+.b-green{background:#EAF3DE;border-color:#97C459}.b-green .box-title{color:#27500A}.b-green .box-sub{color:#3B6D11}
+.b-teal2{background:#E1F5EE;border-color:#5DCAA5}.b-teal2 .box-title{color:#085041}.b-teal2 .box-sub{color:#0F6E56}
+
+.backend-wrap{border:0.5px solid #F0997B;border-radius:8px;background:#FAECE7;padding:8px;flex:1}
+.backend-label{font-size:10px;font-weight:500;color:#993C1D;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;text-align:left}
+.backend-inner{display:flex;gap:6px}
+
+.row-with-tag{display:flex;gap:8px;align-items:center}
+.side-tag{font-size:10px;letter-spacing:0.09em;color:var(--color-text-tertiary);text-transform:uppercase;writing-mode:vertical-rl;transform:rotate(180deg);min-width:16px;text-align:center;flex-shrink:0}
+
+.arr{display:flex;justify-content:center;align-items:center;padding:2px 0;padding-left:24px}
+.arr-wrap{display:flex;flex-direction:column;align-items:center}
+.arr-stem{width:1.5px;height:18px;background:#1a1a1a}
+.arr-head{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #1a1a1a}
+.arr-label{font-size:10px;color:var(--color-text-tertiary);margin-left:6px}
+
+.multi-arr{display:flex;gap:8px;padding:2px 0;padding-left:24px}
+.ma-col{flex:1;display:flex;flex-direction:column;align-items:center}
+.ma-stem{width:1.5px;height:18px;background:#1a1a1a}
+.ma-head{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #1a1a1a}
+</style>
+
+<div class="wrap">
+<div class="diagram">
+
+  <!-- Clients -->
+  <div class="row-with-tag">
+    <div class="side-tag">Клиенты</div>
+    <div class="row" style="flex:1">
+      <div class="box b-purple">
+        <div class="box-title">Web SPA (Angular)</div>
+        <div class="box-sub">TypeScript</div>
+      </div>
+      <div class="box b-teal">
+        <div class="box-title">Mobile App (Flutter)</div>
+        <div class="box-sub">Dart</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arr">
+    <div class="arr-wrap"><div class="arr-stem"></div><div class="arr-head"></div></div>
+    <div class="arr-label">HTTPS/REST + WS</div>
+  </div>
+
+  <!-- Gateway -->
+  <div class="row-with-tag">
+    <div class="side-tag">Gateway</div>
+    <div class="box b-blue" style="flex:1">
+      <div class="box-title">API Gateway / Load Balancer</div>
+    </div>
+  </div>
+
+  <div class="arr">
+    <div class="arr-wrap"><div class="arr-stem"></div><div class="arr-head"></div></div>
+  </div>
+
+  <!-- Backend -->
+  <div class="row-with-tag">
+    <div class="side-tag">Бэкенд</div>
+    <div class="backend-wrap">
+      <div class="backend-label">Backend Service (Laravel)</div>
+      <div class="backend-inner">
+        <div class="box b-pink" style="text-align:center">
+          <div class="box-title">Auth Module</div>
+        </div>
+        <div class="box b-coral" style="text-align:center">
+          <div class="box-title">Session Management</div>
+        </div>
+        <div class="box b-amber" style="text-align:center">
+          <div class="box-title">Reporting</div>
+        </div>
+        <div class="box b-amber" style="text-align:center;background:#FAEEDA;border-color:#EF9F27">
+          <div class="box-title" style="color:#633806">Booking Module</div>
+        </div>
+        <div class="box b-teal" style="text-align:center">
+          <div class="box-title">Payment Module</div>
+        </div>
+        <div class="box b-teal2" style="text-align:center;background:#E1F5EE;border-color:#5DCAA5">
+          <div class="box-title" style="color:#085041">Notification Module</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="multi-arr">
+    <div class="ma-col"><div class="ma-stem"></div><div class="ma-head"></div></div>
+    <div class="ma-col"><div class="ma-stem"></div><div class="ma-head"></div></div>
+  </div>
+
+  <!-- Data -->
+  <div class="row-with-tag">
+    <div class="side-tag">Данные</div>
+    <div class="row" style="flex:1">
+      <div class="box b-blue2">
+        <div class="box-title">PostgreSQL</div>
+        <div class="box-sub">основная БД</div>
+      </div>
+      <div class="box b-red">
+        <div class="box-title">Redis</div>
+        <div class="box-sub">HOLD-блокировки, сессии</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arr">
+    <div class="arr-wrap"><div class="arr-stem"></div><div class="arr-head"></div></div>
+  </div>
+
+  <!-- External -->
+  <div class="row-with-tag">
+    <div class="side-tag">Сервисы</div>
+    <div class="row" style="flex:1">
+      <div class="box b-green">
+        <div class="box-title">Платёжный шлюз</div>
+        <div class="box-sub">Stripe / ЮKassa</div>
+      </div>
+      <div class="box b-teal2">
+        <div class="box-title">Email/SMS сервис</div>
+        <div class="box-sub">SendGrid / SMSC</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>

@@ -1,0 +1,367 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #f0ede8; font-family: 'Georgia', serif; color: #1a1a1a; }
+
+.layout { display: flex; min-height: 100vh; }
+
+/* SIDEBAR */
+.sidebar { width: 210px; flex-shrink: 0; background: #1a1a28; display: flex; flex-direction: column; padding: 0; }
+.sidebar-logo { padding: 22px 20px 18px; border-bottom: 0.5px solid #2a2a3a; }
+.sidebar-logo .logo { font-size: 20px; font-weight: 700; letter-spacing: 0.12em; color: #f5c842; }
+.sidebar-logo .sub { font-size: 10px; color: #8a8070; letter-spacing: 0.08em; margin-top: 2px; }
+
+.nav-section { padding: 16px 12px 4px; }
+.nav-label { font-size: 10px; letter-spacing: 0.14em; color: #4a4a60; text-transform: uppercase; padding: 0 8px 8px; }
+.nav-item { display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 8px; font-size: 13px; color: #8a8070; cursor: pointer; margin-bottom: 2px; }
+.nav-item i { font-size: 17px; flex-shrink: 0; }
+.nav-item.active { background: #f5c842; color: #1a1a28; font-weight: 600; }
+.nav-item.active i { color: #1a1a28; }
+
+.sidebar-bottom { margin-top: auto; padding: 14px 12px; border-top: 0.5px solid #2a2a3a; }
+.user-pill { display: flex; align-items: center; gap: 10px; }
+.avatar { width: 32px; height: 32px; border-radius: 50%; background: #f5c842; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #1a1a28; flex-shrink: 0; }
+.user-name { font-size: 12px; color: #e8e0d0; }
+.user-role { font-size: 10px; color: #8a8070; }
+
+/* MAIN */
+.main { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+
+.topbar { background: #fff; border-bottom: 0.5px solid #e0dbd4; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+.topbar-title { font-size: 17px; font-weight: 600; color: #1a1a1a; }
+.topbar-right { display: flex; align-items: center; gap: 14px; }
+.topbar-right i { font-size: 19px; color: #8a8070; }
+.date-pill { font-size: 12px; color: #8a8070; background: #f0ede8; border: 0.5px solid #d8d3cc; border-radius: 20px; padding: 5px 12px; }
+
+.content { padding: 22px 24px; flex: 1; }
+
+/* METRIC CARDS */
+.metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 22px; }
+.metric { background: #fff; border-radius: 12px; border: 0.5px solid #e0dbd4; padding: 16px 18px; }
+.metric-label { font-size: 11px; color: #8a8070; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+.metric-label i { font-size: 14px; }
+.metric-value { font-size: 26px; font-weight: 700; color: #1a1a1a; line-height: 1; }
+.metric-delta { font-size: 11px; margin-top: 6px; }
+.delta-up { color: #3a9e5f; }
+.delta-down { color: #c0392b; }
+
+/* BOTTOM GRID */
+.bottom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.card { background: #fff; border-radius: 12px; border: 0.5px solid #e0dbd4; overflow: hidden; }
+.card-header { padding: 14px 18px 10px; display: flex; align-items: center; justify-content: space-between; border-bottom: 0.5px solid #f0ede8; }
+.card-title { font-size: 13px; font-weight: 600; color: #1a1a1a; display: flex; align-items: center; gap: 8px; }
+.card-title i { font-size: 15px; color: #8a8070; }
+.card-action { font-size: 11px; color: #f5a800; }
+
+/* TABLE */
+.mini-table { width: 100%; border-collapse: collapse; }
+.mini-table th { font-size: 10px; color: #8a8070; text-transform: uppercase; letter-spacing: 0.08em; padding: 8px 14px; text-align: left; font-weight: 500; background: #faf9f7; }
+.mini-table td { font-size: 12px; padding: 9px 14px; border-top: 0.5px solid #f0ede8; color: #1a1a1a; vertical-align: middle; }
+.mini-table tr:last-child td { border-bottom: none; }
+.genre-badge { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 10px; background: #f0ede8; color: #6a6460; }
+.rating { color: #f5a800; font-size: 11px; }
+
+/* SCHEDULE */
+.schedule-list { padding: 4px 0; }
+.session-row { display: flex; align-items: center; gap: 10px; padding: 9px 14px; border-top: 0.5px solid #f0ede8; }
+.session-row:first-child { border-top: none; }
+.session-time { font-size: 13px; font-weight: 600; color: #1a1a1a; min-width: 42px; }
+.session-info { flex: 1; min-width: 0; }
+.session-title { font-size: 12px; color: #1a1a1a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.session-hall { font-size: 11px; color: #8a8070; }
+.occ-bar-wrap { width: 60px; }
+.occ-bar { height: 4px; border-radius: 2px; background: #f0ede8; overflow: hidden; }
+.occ-fill { height: 100%; border-radius: 2px; }
+.occ-pct { font-size: 10px; color: #8a8070; margin-top: 3px; text-align: right; }
+
+/* JOURNAL */
+.journal-list { padding: 4px 0; }
+.journal-row { display: flex; align-items: flex-start; gap: 10px; padding: 9px 14px; border-top: 0.5px solid #f0ede8; }
+.journal-row:first-child { border-top: none; }
+.j-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+.j-desc { font-size: 12px; color: #1a1a1a; line-height: 1.4; }
+.j-meta { font-size: 11px; color: #8a8070; margin-top: 2px; }
+
+/* FULL-WIDTH CARD */
+.full-card { grid-column: 1 / -1; }
+.report-row { display: flex; align-items: center; gap: 0; }
+.report-col { flex: 1; padding: 14px 18px; border-right: 0.5px solid #f0ede8; }
+.report-col:last-child { border-right: none; }
+.report-col-label { font-size: 10px; color: #8a8070; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 6px; }
+.report-col-value { font-size: 20px; font-weight: 700; color: #1a1a1a; }
+.report-col-sub { font-size: 11px; color: #8a8070; margin-top: 3px; }
+.export-btns { display: flex; gap: 8px; padding: 10px 14px; border-top: 0.5px solid #f0ede8; }
+.export-btn { display: flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 8px; font-size: 12px; border: 0.5px solid #e0dbd4; background: #faf9f7; color: #1a1a1a; font-family: inherit; cursor: pointer; }
+.export-btn i { font-size: 14px; color: #8a8070; }
+
+/* MINI CHART BARS (CSS only) */
+.bar-chart { display: flex; align-items: flex-end; gap: 5px; height: 48px; padding: 0 18px 14px; }
+.bar { flex: 1; border-radius: 3px 3px 0 0; background: #f5c842; opacity: 0.7; }
+.bar.hi { opacity: 1; }
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo">CINEMA TICKET</div>
+      <div class="sub">Администратор</div>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-label">Управление</div>
+      <div class="nav-item active"><i class="ti ti-layout-dashboard" aria-hidden="true"></i> Главная</div>
+      <div class="nav-item"><i class="ti ti-movie" aria-hidden="true"></i> Фильмы</div>
+      <div class="nav-item"><i class="ti ti-building" aria-hidden="true"></i> Залы</div>
+      <div class="nav-item"><i class="ti ti-calendar" aria-hidden="true"></i> Сеансы</div>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-label">Аналитика</div>
+      <div class="nav-item"><i class="ti ti-chart-bar" aria-hidden="true"></i> Отчёты</div>
+      <div class="nav-item"><i class="ti ti-notebook" aria-hidden="true"></i> Журнал</div>
+    </div>
+
+    <div class="sidebar-bottom">
+      <div class="user-pill">
+        <div class="avatar">АД</div>
+        <div>
+          <div class="user-name">Алексей Д.</div>
+          <div class="user-role">Администратор</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+    <div class="topbar">
+      <div class="topbar-title">Главная панель</div>
+      <div class="topbar-right">
+        <div class="date-pill"><i class="ti ti-calendar" style="font-size:12px;vertical-align:-1px;margin-right:5px" aria-hidden="true"></i>16 мая 2026</div>
+        <i class="ti ti-bell" aria-hidden="true"></i>
+        <i class="ti ti-settings" aria-hidden="true"></i>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!-- METRICS -->
+      <div class="metrics">
+        <div class="metric">
+          <div class="metric-label"><i class="ti ti-ticket" aria-hidden="true"></i> Билеты сегодня</div>
+          <div class="metric-value">1 248</div>
+          <div class="metric-delta delta-up">▲ 12% к вчера</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label"><i class="ti ti-cash" aria-hidden="true"></i> Выручка, ₽</div>
+          <div class="metric-value">187 400</div>
+          <div class="metric-delta delta-up">▲ 8% к вчера</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label"><i class="ti ti-armchair" aria-hidden="true"></i> Заполн-сть</div>
+          <div class="metric-value">74%</div>
+          <div class="metric-delta delta-down">▼ 3% к вчера</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label"><i class="ti ti-calendar-event" aria-hidden="true"></i> Сеансов сегодня</div>
+          <div class="metric-value">32</div>
+          <div class="metric-delta" style="color:#8a8070">в 6 залах</div>
+        </div>
+      </div>
+
+      <!-- BOTTOM GRID -->
+      <div class="bottom-grid">
+
+        <!-- FILMS TABLE -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><i class="ti ti-movie" aria-hidden="true"></i> Фильмы в прокате</div>
+            <div class="card-action">CRUD →</div>
+          </div>
+          <table class="mini-table">
+            <thead>
+              <tr><th>Название</th><th>Жанр</th><th>Рейтинг</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Дюна: Часть третья</td>
+                <td><span class="genre-badge">Фантастика</span></td>
+                <td><span class="rating">★ 8.4</span></td>
+              </tr>
+              <tr>
+                <td>Падение Луны</td>
+                <td><span class="genre-badge">Триллер</span></td>
+                <td><span class="rating">★ 7.9</span></td>
+              </tr>
+              <tr>
+                <td>Чёрное зеркало</td>
+                <td><span class="genre-badge">Драма</span></td>
+                <td><span class="rating">★ 7.2</span></td>
+              </tr>
+              <tr>
+                <td>Огненный лис</td>
+                <td><span class="genre-badge">Анимация</span></td>
+                <td><span class="rating">★ 8.1</span></td>
+              </tr>
+              <tr>
+                <td>Карнавал</td>
+                <td><span class="genre-badge">Комедия</span></td>
+                <td><span class="rating">★ 6.8</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- SESSIONS -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><i class="ti ti-calendar" aria-hidden="true"></i> Сеансы сегодня</div>
+            <div class="card-action">Фильтр по залу →</div>
+          </div>
+          <div class="schedule-list">
+            <div class="session-row">
+              <div class="session-time">10:15</div>
+              <div class="session-info">
+                <div class="session-title">Дюна: Часть третья</div>
+                <div class="session-hall">Зал 1 · IMAX</div>
+              </div>
+              <div class="occ-bar-wrap">
+                <div class="occ-bar"><div class="occ-fill" style="width:82%;background:#3a9e5f;"></div></div>
+                <div class="occ-pct">82%</div>
+              </div>
+            </div>
+            <div class="session-row">
+              <div class="session-time">12:30</div>
+              <div class="session-info">
+                <div class="session-title">Огненный лис</div>
+                <div class="session-hall">Зал 3 · 2D</div>
+              </div>
+              <div class="occ-bar-wrap">
+                <div class="occ-bar"><div class="occ-fill" style="width:55%;background:#f5a800;"></div></div>
+                <div class="occ-pct">55%</div>
+              </div>
+            </div>
+            <div class="session-row">
+              <div class="session-time">14:00</div>
+              <div class="session-info">
+                <div class="session-title">Падение Луны</div>
+                <div class="session-hall">Зал 2 · 3D</div>
+              </div>
+              <div class="occ-bar-wrap">
+                <div class="occ-bar"><div class="occ-fill" style="width:91%;background:#3a9e5f;"></div></div>
+                <div class="occ-pct">91%</div>
+              </div>
+            </div>
+            <div class="session-row">
+              <div class="session-time">16:45</div>
+              <div class="session-info">
+                <div class="session-title">Чёрное зеркало</div>
+                <div class="session-hall">Зал 4 · 2D</div>
+              </div>
+              <div class="occ-bar-wrap">
+                <div class="occ-bar"><div class="occ-fill" style="width:38%;background:#c0392b;"></div></div>
+                <div class="occ-pct">38%</div>
+              </div>
+            </div>
+            <div class="session-row">
+              <div class="session-time">19:20</div>
+              <div class="session-info">
+                <div class="session-title">Дюна: Часть третья</div>
+                <div class="session-hall">Зал 1 · IMAX</div>
+              </div>
+              <div class="occ-bar-wrap">
+                <div class="occ-bar"><div class="occ-fill" style="width:100%;background:#3a9e5f;"></div></div>
+                <div class="occ-pct">100%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- REPORTS WIDE -->
+        <div class="card full-card">
+          <div class="card-header">
+            <div class="card-title"><i class="ti ti-chart-bar" aria-hidden="true"></i> Отчёт за период</div>
+            <div class="card-action">Настроить параметры →</div>
+          </div>
+          <div class="report-row">
+            <div class="report-col">
+              <div class="report-col-label">Выручка</div>
+              <div class="report-col-value">1 240 500 ₽</div>
+              <div class="report-col-sub">за май 2026</div>
+            </div>
+            <div class="report-col">
+              <div class="report-col-label">Продажи билетов</div>
+              <div class="report-col-value">18 342</div>
+              <div class="report-col-sub">за май 2026</div>
+            </div>
+            <div class="report-col">
+              <div class="report-col-label">Средняя заполн-сть</div>
+              <div class="report-col-value">71%</div>
+              <div class="report-col-sub">по всем залам</div>
+            </div>
+            <div class="report-col" style="border-right:none; padding:0; overflow:hidden;">
+              <div class="report-col-label" style="padding:14px 18px 6px;">Продажи по дням</div>
+              <div class="bar-chart">
+                <div class="bar" style="height:40%"></div>
+                <div class="bar" style="height:55%"></div>
+                <div class="bar" style="height:45%"></div>
+                <div class="bar" style="height:70%"></div>
+                <div class="bar" style="height:60%"></div>
+                <div class="bar" style="height:80%"></div>
+                <div class="bar hi" style="height:100%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="export-btns">
+            <button class="export-btn"><i class="ti ti-file-spreadsheet" aria-hidden="true"></i> Экспорт Excel</button>
+            <button class="export-btn"><i class="ti ti-file-type-pdf" aria-hidden="true"></i> Экспорт PDF</button>
+          </div>
+        </div>
+
+        <!-- JOURNAL -->
+        <div class="card full-card">
+          <div class="card-header">
+            <div class="card-title"><i class="ti ti-notebook" aria-hidden="true"></i> Журнал операций</div>
+            <div class="card-action">Фильтр по типу →</div>
+          </div>
+          <div class="journal-list">
+            <div class="journal-row">
+              <div class="j-dot" style="background:#3a9e5f"></div>
+              <div>
+                <div class="j-desc">Создан сеанс — «Дюна: Часть третья», Зал 1, 21:00</div>
+                <div class="j-meta">16 мая, 09:14 · Алексей Д.</div>
+              </div>
+            </div>
+            <div class="journal-row">
+              <div class="j-dot" style="background:#f5a800"></div>
+              <div>
+                <div class="j-desc">Изменён фильм — обновлён постер «Огненный лис»</div>
+                <div class="j-meta">16 мая, 08:52 · Марина С.</div>
+              </div>
+            </div>
+            <div class="journal-row">
+              <div class="j-dot" style="background:#c0392b"></div>
+              <div>
+                <div class="j-desc">Удалён сеанс — «Карнавал», Зал 5, 13:00 (пересечение)</div>
+                <div class="j-meta">15 мая, 22:30 · Алексей Д.</div>
+              </div>
+            </div>
+            <div class="journal-row">
+              <div class="j-dot" style="background:#3a9e5f"></div>
+              <div>
+                <div class="j-desc">Добавлен зал — Зал 6 (VIP, 40 мест)</div>
+                <div class="j-meta">15 мая, 18:05 · Марина С.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
