@@ -1,0 +1,746 @@
+============================================================
+🍏 EVALUATION: APPLE_BINARY
+============================================================
+
+📊 SUMMARY
+Accuracy: 30/30 (100.00%)
+Healthy (Class 1): 15/15 correctly predicted
+Diseased (Class 0): 15/15 correctly predicted
+
+📋 DETAILED PREDICTIONS:
+
+✅ 1.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 10.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 11.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 12.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 13.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 14.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0001
+
+✅ 15.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 2.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 3.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 4.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 5.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 6.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 7.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 8.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 9.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 1.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 10.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 11.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 12.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 13.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9997
+
+✅ 14.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9999
+
+✅ 15.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9999
+
+✅ 2.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 3.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9672
+
+✅ 4.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9997
+
+✅ 5.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 6.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9992
+
+✅ 7.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 8.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9992
+
+✅ 9.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9979
+
+
+✅ NO ERRORS! Perfect classification!
+
+============================================================
+
+
+============================================================
+🍏 EVALUATION: CORN_BINARY
+============================================================
+
+corn_binary model is loaded
+📊 SUMMARY
+Accuracy: 30/30 (100.00%)
+Healthy (Class 1): 15/15 correctly predicted
+Diseased (Class 0): 15/15 correctly predicted
+
+📋 DETAILED PREDICTIONS:
+
+✅ 1.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 10.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 11.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0821
+
+✅ 12.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0168
+
+✅ 13.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 14.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 15.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0002
+
+✅ 2.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 3.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 4.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 5.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0005
+
+✅ 6.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 7.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 8.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 9.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 1.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 10.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.8272
+
+✅ 11.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 12.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 13.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9999
+
+✅ 14.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 15.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 2.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9998
+
+✅ 3.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 4.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9995
+
+✅ 5.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 6.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9877
+
+✅ 7.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9997
+
+✅ 8.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 9.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+
+✅ NO ERRORS! Perfect classification!
+
+============================================================
+
+
+============================================================
+🍏 EVALUATION: GRAPE_BINARY
+============================================================
+
+grape_binary model is loaded
+📊 SUMMARY
+Accuracy: 30/30 (100.00%)
+Healthy (Class 1): 15/15 correctly predicted
+Diseased (Class 0): 15/15 correctly predicted
+
+📋 DETAILED PREDICTIONS:
+
+✅ 1.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 10.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 11.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 12.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 13.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 14.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 15.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 2.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 3.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 4.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 5.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 6.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 7.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 8.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 9.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0003
+
+✅ 1.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 10.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 11.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9999
+
+✅ 12.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9969
+
+✅ 13.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 14.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 15.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 2.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9991
+
+✅ 3.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 4.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9999
+
+✅ 5.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 6.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 7.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9999
+
+✅ 8.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 9.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+
+✅ NO ERRORS! Perfect classification!
+
+============================================================
+
+
+============================================================
+🍏 EVALUATION: POTATO_BINARY
+============================================================
+
+potato_binary model is loaded
+📊 SUMMARY
+Accuracy: 30/30 (100.00%)
+Healthy (Class 1): 15/15 correctly predicted
+Diseased (Class 0): 15/15 correctly predicted
+
+📋 DETAILED PREDICTIONS:
+
+✅ 1.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 10.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 11.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 12.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 13.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 14.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.1740
+
+✅ 15.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 2.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 3.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 4.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 5.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 6.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 7.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 8.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 9.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 1.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9997
+
+✅ 10.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9995
+
+✅ 11.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9892
+
+✅ 12.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9992
+
+✅ 13.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9990
+
+✅ 14.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 15.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9997
+
+✅ 2.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 3.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 4.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9998
+
+✅ 5.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9998
+
+✅ 6.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9992
+
+✅ 7.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 8.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9997
+
+✅ 9.jpg
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9935
+
+
+✅ NO ERRORS! Perfect classification!
+
+============================================================
+
+
+============================================================
+🍏 EVALUATION: TOMATO_BINARY
+============================================================
+
+tomato_binary model is loaded
+
+📊 SUMMARY
+Accuracy: 27/29 (93.10%)
+Healthy (Class 1): 14/14 correctly predicted
+Diseased (Class 0): 13/15 correctly predicted
+
+📋 DETAILED PREDICTIONS:
+
+✅ 1.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 10.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 11.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0210
+
+❌ 12.jpg
+   True: DISEASED | Pred: HEALTHY | Prob(healthy): 1.0000
+   ⚠️  MISCLASSIFIED!
+
+✅ 13.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.2647
+
+❌ 14.jpg
+   True: DISEASED | Pred: HEALTHY | Prob(healthy): 0.9210
+   ⚠️  MISCLASSIFIED!
+
+✅ 15.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0084
+
+✅ 2.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 3.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 4.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 5.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0005
+
+✅ 6.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 7.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 8.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 9.jpg
+   True: DISEASED | Pred: DISEASED | Prob(healthy): 0.0000
+
+✅ 10_masked.png
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 11_masked.png
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9999
+
+✅ 12_masked.png
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9999
+
+✅ 13_masked.png
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 15_masked.png
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 1_masked.png
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9990
+
+✅ 2_masked.png
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 3_masked.png
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9946
+
+✅ 4_masked.png
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 5_masked.png
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 0.9987
+
+✅ 6_masked.png
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 7_masked.png
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 8_masked.png
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+✅ 9_masked.png
+   True: HEALTHY | Pred: HEALTHY | Prob(healthy): 1.0000
+
+
+⚠️  TOTAL ERRORS: 2/29
+
+  Healthy misclassified as Diseased: 0
+  Diseased misclassified as Healthy: 2
+============================================================
+
+
+============================================================
+🍏 EVALUATION: APPLE_CATEGORICAL
+============================================================
+
+apple_categorical model is loaded
+📊 SUMMARY
+Global Accuracy: 80.00%
+Total samples: 45
+
+📋 CLASSIFICATION REPORT:
+
+                          precision    recall  f1-score   support
+
+      Apple___Apple_scab     0.9167    0.7333    0.8148        15
+       Apple___Black_rot     0.9231    0.8000    0.8571        15
+Apple___Cedar_apple_rust     0.6500    0.8667    0.7429        15
+
+                accuracy                         0.8000        45
+               macro avg     0.8299    0.8000    0.8049        45
+            weighted avg     0.8299    0.8000    0.8049        45
+
+
+⚠️  TOTAL ERRORS: 9/45
+
+Sample of misclassified images:
+❌ 12.jpg
+   True: Apple___Apple_scab | Pred: Apple___Cedar_apple_rust | Conf: 0.6596
+❌ 14.jpg
+   True: Apple___Apple_scab | Pred: Apple___Cedar_apple_rust | Conf: 0.5147
+❌ 2.jpg
+   True: Apple___Apple_scab | Pred: Apple___Cedar_apple_rust | Conf: 0.9809
+❌ 3.jpg
+   True: Apple___Apple_scab | Pred: Apple___Cedar_apple_rust | Conf: 0.7417
+❌ 10.jpg
+   True: Apple___Black_rot | Pred: Apple___Cedar_apple_rust | Conf: 0.5940
+❌ 13.jpg
+   True: Apple___Black_rot | Pred: Apple___Cedar_apple_rust | Conf: 0.9583
+❌ 5.jpg
+   True: Apple___Black_rot | Pred: Apple___Cedar_apple_rust | Conf: 0.9177
+❌ 10.jpg
+   True: Apple___Cedar_apple_rust | Pred: Apple___Black_rot | Conf: 0.9709
+❌ 15.jpg
+   True: Apple___Cedar_apple_rust | Pred: Apple___Apple_scab | Conf: 0.7628
+============================================================
+
+
+============================================================
+🍏 EVALUATION: CORN_CATEGORICAL
+============================================================
+
+corn_categorical model is loaded
+📊 SUMMARY
+Global Accuracy: 91.11%
+Total samples: 45
+
+📋 CLASSIFICATION REPORT:
+
+                                                    precision    recall  f1-score   support
+
+Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot     0.8235    0.9333    0.8750        15
+                       Corn_(maize)___Common_rust_     0.9231    0.8000    0.8571        15
+               Corn_(maize)___Northern_Leaf_Blight     1.0000    1.0000    1.0000        15
+
+                                          accuracy                         0.9111        45
+                                         macro avg     0.9155    0.9111    0.9107        45
+                                      weighted avg     0.9155    0.9111    0.9107        45
+
+
+⚠️  TOTAL ERRORS: 4/45
+
+Sample of misclassified images:
+❌ 7.jpg
+   True: Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot | Pred: Corn_(maize)___Common_rust_ | Conf: 0.9982
+❌ 11.jpg
+   True: Corn_(maize)___Common_rust_ | Pred: Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot | Conf: 0.5702
+❌ 15.jpg
+   True: Corn_(maize)___Common_rust_ | Pred: Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot | Conf: 0.8022
+❌ 9.jpg
+   True: Corn_(maize)___Common_rust_ | Pred: Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot | Conf: 0.8477
+============================================================
+
+
+============================================================
+🍏 EVALUATION: GRAPE_CATEGORICAL
+============================================================
+
+grape_categorical model is loaded
+📊 SUMMARY
+Global Accuracy: 84.44%
+Total samples: 45
+
+📋 CLASSIFICATION REPORT:
+
+                                            precision    recall  f1-score   support
+
+                         Grape___Black_rot     0.9231    0.8000    0.8571        15
+              Grape___Esca_(Black_Measles)     1.0000    0.8000    0.8889        15
+Grape___Leaf_blight_(Isariopsis_Leaf_Spot)     0.7000    0.9333    0.8000        15
+
+                                  accuracy                         0.8444        45
+                                 macro avg     0.8744    0.8444    0.8487        45
+                              weighted avg     0.8744    0.8444    0.8487        45
+
+
+⚠️  TOTAL ERRORS: 7/45
+
+Sample of misclassified images:
+❌ 12.jpg
+   True: Grape___Black_rot | Pred: Grape___Leaf_blight_(Isariopsis_Leaf_Spot) | Conf: 0.9894
+❌ 15.jpg
+   True: Grape___Black_rot | Pred: Grape___Leaf_blight_(Isariopsis_Leaf_Spot) | Conf: 0.5348
+❌ 8.jpg
+   True: Grape___Black_rot | Pred: Grape___Leaf_blight_(Isariopsis_Leaf_Spot) | Conf: 0.8338
+❌ 1.jpg
+   True: Grape___Esca_(Black_Measles) | Pred: Grape___Leaf_blight_(Isariopsis_Leaf_Spot) | Conf: 0.6648
+❌ 4.jpg
+   True: Grape___Esca_(Black_Measles) | Pred: Grape___Leaf_blight_(Isariopsis_Leaf_Spot) | Conf: 0.9996
+❌ 7.jpg
+   True: Grape___Esca_(Black_Measles) | Pred: Grape___Leaf_blight_(Isariopsis_Leaf_Spot) | Conf: 0.7869
+❌ 3.jpg
+   True: Grape___Leaf_blight_(Isariopsis_Leaf_Spot) | Pred: Grape___Black_rot | Conf: 0.9436
+============================================================
+
+
+============================================================
+🍏 EVALUATION: POTATO_CATEGORICAL
+============================================================
+
+potato_categorical model is loaded
+📊 SUMMARY
+Global Accuracy: 96.67%
+Total samples: 30
+
+📋 CLASSIFICATION REPORT:
+
+                       precision    recall  f1-score   support
+
+Potato___Early_blight     1.0000    0.9333    0.9655        15
+ Potato___Late_blight     0.9375    1.0000    0.9677        15
+
+             accuracy                         0.9667        30
+            macro avg     0.9688    0.9667    0.9666        30
+         weighted avg     0.9688    0.9667    0.9666        30
+
+
+⚠️  TOTAL ERRORS: 1/30
+
+Sample of misclassified images:
+❌ 5.jpg
+   True: Potato___Early_blight | Pred: Potato___Late_blight | Conf: 0.8682
+============================================================
+
+
+============================================================
+🍏 EVALUATION: TOMATO_CATEGORICAL
+============================================================
+
+tomato_categorical model is loaded
+📊 SUMMARY
+Global Accuracy: 75.56%
+Total samples: 90
+
+📋 CLASSIFICATION REPORT:
+
+                                        precision    recall  f1-score   support
+
+               Tomato___Bacterial_spot     0.7778    0.4667    0.5833        15
+                 Tomato___Early_blight     0.6316    0.8000    0.7059        15
+                  Tomato___Late_blight     0.8000    0.8000    0.8000        15
+                    Tomato___Leaf_Mold     0.7857    0.7333    0.7586        15
+           Tomato___Septoria_leaf_spot     0.6500    0.8667    0.7429        15
+Tomato___Tomato_Yellow_Leaf_Curl_Virus     1.0000    0.8667    0.9286        15
+
+                              accuracy                         0.7556        90
+                             macro avg     0.7742    0.7556    0.7532        90
+                          weighted avg     0.7742    0.7556    0.7532        90
+
+
+⚠️  TOTAL ERRORS: 22/90
+
+Sample of misclassified images:
+❌ 11.jpg
+   True: Tomato___Bacterial_spot | Pred: Tomato___Septoria_leaf_spot | Conf: 0.5580
+❌ 12.jpg
+   True: Tomato___Bacterial_spot | Pred: Tomato___Leaf_Mold | Conf: 0.9228
+❌ 15.jpg
+   True: Tomato___Bacterial_spot | Pred: Tomato___Septoria_leaf_spot | Conf: 0.6831
+❌ 2.jpg
+   True: Tomato___Bacterial_spot | Pred: Tomato___Early_blight | Conf: 0.8112
+❌ 5.jpg
+   True: Tomato___Bacterial_spot | Pred: Tomato___Early_blight | Conf: 0.7114
+❌ 6.jpg
+   True: Tomato___Bacterial_spot | Pred: Tomato___Early_blight | Conf: 0.5467
+❌ 8.jpg
+   True: Tomato___Bacterial_spot | Pred: Tomato___Septoria_leaf_spot | Conf: 0.4827
+❌ 9.jpg
+   True: Tomato___Bacterial_spot | Pred: Tomato___Septoria_leaf_spot | Conf: 0.8129
+❌ 11.jpg
+   True: Tomato___Early_blight | Pred: Tomato___Septoria_leaf_spot | Conf: 0.7782
+❌ 12.jpg
+   True: Tomato___Early_blight | Pred: Tomato___Septoria_leaf_spot | Conf: 0.5813
+============================================================
+
+
+Process finished with exit code 0
